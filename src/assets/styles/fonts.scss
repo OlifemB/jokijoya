@@ -1,0 +1,20 @@
+$fontFaces: (
+        drukCyrMedium: 'DrukCyr-Medium.ttf',
+        drukwidecyrMedium: 'drukwidecyr-medium.ttf',
+        montserratBold:'Montserrat-Bold.ttf',
+        nunitoSansBlack:'NunitoSans-Black.ttf',
+        nunitoSansBold:'NunitoSans-Bold.ttf',
+        nunitoSansLight:'NunitoSans-Light.ttf',
+        nunitoSansRegular: 'NunitoSans-Regular.ttf',
+);
+
+@each $name, $path in $fontFaces {
+  @font-face {
+    font-family: $name;
+    src: url('../fonts/' + $path);
+  }
+
+  .#{$name} {
+    font-family: $name
+  }
+}
